@@ -4,7 +4,7 @@ By Alexandre da Costa.
 
 This is a simple Laravel REST API project to demonstrate my skills with it and with PHP.
 Although there is a welcome page for quickly testing server status, the API is the main focus of this project.
-A standalone Vue.js application to consume this API is available at [].
+A standalone Vue.js SPA to consume this API is available at https://github.com/alexandre-da-costa/simple-posts-search-spa.
 
 ## Requirements
 
