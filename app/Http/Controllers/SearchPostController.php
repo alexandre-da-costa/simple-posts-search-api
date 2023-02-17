@@ -11,7 +11,7 @@ class SearchPostController extends Controller
     {
         $posts = $request->filled('search')
             ? $postService->search($request->input('search'))
-            : $postService->getAll();
+            : [];
 
         return response()->json($posts);
     }

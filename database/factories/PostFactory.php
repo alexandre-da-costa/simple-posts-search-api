@@ -17,8 +17,8 @@ class PostFactory extends Factory
                 User::exists() && fake()->boolean
                     ? User::inRandomOrder()->value('id')
                     : User::factory()->create()->id,
-            'title' => fake()->boolean ? fake()->realTextBetween(16, 64) : fake()->sentence,
-            'body' => fake()->boolean ? fake()->realTextBetween(256,1024) : fake()->paragraph,
+            'title' => fake()->realTextBetween(16, 64),
+            'body' => fake()->realTextBetween(256, 1024),
             'is_public' => fake()->boolean
         ];
     }
