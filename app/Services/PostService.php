@@ -23,7 +23,7 @@ class PostService
         return $this->entity::query()
             ->with('user:id,name')
             ->whereFullText(['title', 'body'], $search)
-            ->selectRaw("id, user_id, title, is_public, slug, created_at"
+            ->selectRaw("id, user_id, title, is_public, slug, created_at, "
                 . "SUBSTRING(body, GREATEST(1, LOCATE(?, body) - ?), ?) AS body_excerpt",
                 [$search, self::EXCERPT_PREFIX, self::EXCERPT_LENGTH])
             ->get();
